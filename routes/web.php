@@ -11,4 +11,6 @@ use App\Http\Controllers\ListController;
 //     return view('login.index');
 // });
 
-Route::get('/tampil', [ListController::class, "tambah"]);
+Route::get('/tampil', [ListController::class, "index"]);
+Route::get('/tambahlist', [ListController::class, "store"]);
+Route::get('/hapuslist/{id}', [ListController::class, "hapus"]);
