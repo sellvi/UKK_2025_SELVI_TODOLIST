@@ -28,22 +28,29 @@ class ListController extends Controller
     }
 
     //proses masukan ke database
-    // public function store(){
-    //     $daftar = new Lists;
-    //         $daftar->nama = "tugas selvi";
-    //     $daftar->save();
+    public function store(Request $request){
 
+        // return "ada di method store";
+        //cara1
+        $daftar = new Lists;
+            $daftar->nama = $request->nama_list;
+        
+            $daftar->save();
+
+            return redirect()->back();
+
+            //cara2
         // Lists::create([
         //     "nama => 'tugas selvi'
         // ]);
     }
 
-    // // untuk menghapus list
-    // public function hapus($id){
-    //     $data = Lists::find($id);
+    // untuk menghapus list
+    public function hapus($id){
+        $data = Lists::find($id);
 
-    //     $data->delete();
-    // }
+        $data->delete();
+    }
 
 
-// }
+}
