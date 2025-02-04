@@ -14,11 +14,11 @@ class ListController extends Controller
     public function index(){
 
         // $judul = "dashboard";
-        $list = Lists::all();
+        // $list = Lists::all();
 
         // return $list;
 
-        return view('task.dashboard');
+        return view('Task.dashboard');
     }
 
     //tambah list
@@ -28,22 +28,22 @@ class ListController extends Controller
     }
 
     //proses masukan ke database
-    public function store(){
-        $daftar = new Lists;
-            $daftar->nama = "tugas selvi";
-        $daftar->save();
+    // public function store(){
+    //     $daftar = new Lists;
+    //         $daftar->nama = "tugas selvi";
+    //     $daftar->save();
 
         // Lists::create([
         //     "nama => 'tugas selvi'
         // ]);
     }
 
-    // untuk menghapus list
-    public function hapus($id){
-        $data = Lists::find($id);
+    // // untuk menghapus list
+    // public function hapus($id){
+    //     $data = Lists::find($id);
 
-        $data->delete();
-    }
+    //     $data->delete();
+    // }
 
 
-}
+// }
