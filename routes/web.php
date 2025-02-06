@@ -12,5 +12,6 @@ use App\Http\Controllers\ListController;
 // });
 
 Route::get('/tampil', [ListController::class, "index"]);
+Route::get('/list/{id}', [ListController::class, "show"]);
 Route::post('/tambahlist', [ListController::class, "store"]);
-Route::get('/hapuslist/{id}', [ListController::class, "hapus"]);
+Route::delete('/hapuslist/{id}', [ListController::class, "hapus"]);

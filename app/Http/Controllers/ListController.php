@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lists;
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 class ListController extends Controller
@@ -18,7 +19,7 @@ class ListController extends Controller
 
         // return $list;
 
-        return view('Task.dashboard');
+        return view('layouts.index');
     }
 
     //tambah list
@@ -45,11 +46,22 @@ class ListController extends Controller
         // ]);
     }
 
+    public function show($id){
+        // Lists::where('id',$id);
+
+        $list = Lists::find($id);
+        // return view('Task.index',["data"=>$list]);
+        $task = Task::where("id_list", $id)->get();
+
+        return view("Task.index",["data" => $list, "todo" => $task]);
+    }
+
     // untuk menghapus list
     public function hapus($id){
         $data = Lists::find($id);
-
+        // $dsta = Task::where();
         $data->delete();
+        return redirect()->back();
     }
 
 

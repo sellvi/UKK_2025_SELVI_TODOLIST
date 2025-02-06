@@ -130,7 +130,12 @@
             <h5 class="submenu-title">My Project</h5>
             <ul class="submenu">
                 @foreach ($lists as $daftar)
-                <li> {{$daftar->nama }} </li>
+                <li class="mb-5"><a href={{url("list")}}>{{$daftar->nama }}</a> 
+                  <form action={{url("hapuslist/$daftar->id")}} method="POST">
+                        @method('DELETE')
+                        @csrf
+
+                    <button  class="btn btn-danger btn-sm"> HAPUS </button></form></li>
                  @endforeach
                    
             </ul>
