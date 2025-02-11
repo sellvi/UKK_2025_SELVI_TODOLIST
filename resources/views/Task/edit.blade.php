@@ -19,7 +19,7 @@
             <div class="mb-3">
                 <label for="status" class="form-label" >Status</label>
                 <select name="status" class="form-select">
-                    <option value="belum_selesai">Belum Selesai</option>
+                    <option value="belum _selesai">Belum Selesai</option>
                     <option value="selesai">Selesai</option>
                 </select>
             </div>

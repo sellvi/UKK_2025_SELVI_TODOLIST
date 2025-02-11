@@ -10,7 +10,6 @@
         <form action={{url("/hapustask/$task->id_task")}} method="POST">
             @method("DELETE")
             @csrf
-            <button class= "btn btn-danger btn-sm">SELESAI</button>
             <button class= "btn btn-danger btn-sm">HAPUS</button>
 
             <a href="{{ url("/task/$task->id_task/edit") }}" class="btn btn-outline-success btn-sm">EDIT</a>

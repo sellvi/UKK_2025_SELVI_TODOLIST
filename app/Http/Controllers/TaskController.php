@@ -46,6 +46,8 @@ public function edit(string $id_task)
             ];
         
             $task->update($data);
+
+            return redirect("list/$task->id_list"); 
             if(!$task){
                 return redirect()->route('list', ['id' => $task->id_task]); 
             }
