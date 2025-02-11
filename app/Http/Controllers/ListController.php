@@ -50,10 +50,15 @@ class ListController extends Controller
         // Lists::where('id',$id);
 
         $list = Lists::find($id);
+
+
+        if(!$list){
+            return redirect("/tampil");
+        }
         // return view('Task.index',["data"=>$list]);
         $task = Task::where("id_list", $id)->get();
 
-        return view("Task.index",["data" => $list, "todo" => $task]);
+        return view("Task.index",["data" => $list, "todo" => $task,'id_list'=>$list->id]);
     }
 
     // untuk menghapus list
