@@ -140,7 +140,11 @@
                    
             </ul>
           </li>
-
+          <form action={{url('/logout')}} method="POST">
+            @method('POST')
+            @csrf
+            <button class="btn btn-danger">Logout</button>
+          </form>
           
     </div>
  
