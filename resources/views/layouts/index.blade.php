@@ -16,6 +16,7 @@
         body {
             display: flex;
             min-height: 100vh;
+            background-color: #ecf0f1;
         }
 
         .sidebar {
@@ -70,7 +71,7 @@
 
         .content {
             flex-grow: 1;
-            background-color: #ecf0f1;
+            background-color: #f8f9fa;
             padding: 20px;
         }
 
@@ -119,7 +120,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button type="submit" class="btn btn-primary">Save</button>
         </div>
     </form>
       </div>

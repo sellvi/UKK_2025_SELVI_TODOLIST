@@ -37,8 +37,12 @@
             </div>
         </div>
         <div class="modal-footer">
+            <form action="{{url("/list")}}" method="GET"> 
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </form>
+           
             <button type="submit" class="btn btn-primary">Update</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
         </div>
     </div>
 </form>

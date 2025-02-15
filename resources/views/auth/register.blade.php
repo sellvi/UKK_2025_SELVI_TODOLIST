@@ -38,7 +38,7 @@
             {{-- input email --}}
             <div class="form-group">
                 <label for="username">email</label>
-                <input type="text" name="email" id="email" class="form-control" required placeholder="Masukan username">
+                <input type="text" name="email" id="email" class="form-control" required placeholder="Masukan email">
             </div>
             <!-- Input Password -->
             <div class="form-group">
