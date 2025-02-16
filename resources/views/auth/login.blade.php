@@ -25,7 +25,7 @@
             <!-- Input Username -->
             <div class="form-group">
                 <label for="username">email</label>
-                <input type="text" name="email" id="email" class="form-control" required placeholder="Masukan username">
+                <input type="text" name="email" id="email" class="form-control" required placeholder="Masukan email">
             </div>
             <!-- Input Password -->
             <div class="form-group">
@@ -38,6 +38,13 @@
                 <span>belum punya akun ? <a href="{{url('/register')}}">registrasi</a></span>
             </div>
         </form>
+        @if ($errors->any())
+    <div class="alert" style="margin-top: 15px; background-color:#ffffff; color:red;">
+        @foreach ($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    </div>
+    @endif
     </div>
 </div>
 
