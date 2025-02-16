@@ -14,7 +14,7 @@
 
             <a href="{{ url("/task/$task->id_task/edit") }}" class="btn btn-outline-success btn-sm">EDIT</a>
           </form>
-           @endforeach
+          @endforeach
     </ul>    
     
      <!-- Button trigger modal -->

@@ -13,7 +13,10 @@ use App\Http\Controllers\AuthController;
 //     return view('login.index');
 // });
 
-Route::get('/tampil', [ListController::class, "index"]);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/tampil', [ListController::class, "index"]);
+});
+
 Route::get('/list/{id}', [ListController::class, "show"]);
 Route::post('/tambahlist', [ListController::class, "store"]);
 Route::delete('/hapuslist/{id}', [ListController::class, "hapus"]);
