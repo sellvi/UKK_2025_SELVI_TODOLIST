@@ -31,7 +31,7 @@ public function edit(string $id_task)
         {
             $task = Task::where('id_task', $id_task)->first(); // Gunakan 'id_taks' sesuai dengan primary key
         
-            return view("task.edit", ["task" => $task]); // Perbaiki variabel 'task' (dulu 'taks')
+            return view("Task.edit", ["task" => $task]); // Perbaiki variabel 'task' (dulu 'taks')
         }
         
         public function update(Request $request, string $id_task)
